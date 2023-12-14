@@ -14,6 +14,7 @@
 		BD2B72FB2B2B932300199AE6 /* LaMeteoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B72FA2B2B932300199AE6 /* LaMeteoTests.swift */; };
 		BD2B73052B2B932300199AE6 /* LaMeteoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B73042B2B932300199AE6 /* LaMeteoUITests.swift */; };
 		BD2B73072B2B932300199AE6 /* LaMeteoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B73062B2B932300199AE6 /* LaMeteoUITestsLaunchTests.swift */; };
+		BD2B73162B2B937600199AE6 /* SampleWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B73152B2B937600199AE6 /* SampleWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BD2B73002B2B932300199AE6 /* LaMeteoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaMeteoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2B73042B2B932300199AE6 /* LaMeteoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaMeteoUITests.swift; sourceTree = "<group>"; };
 		BD2B73062B2B932300199AE6 /* LaMeteoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaMeteoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BD2B73152B2B937600199AE6 /* SampleWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,9 @@
 		BD2B72E82B2B932100199AE6 /* LaMeteo */ = {
 			isa = PBXGroup;
 			children = (
+				BD2B73142B2B935500199AE6 /* Models */,
+				BD2B73132B2B934A00199AE6 /* Views */,
 				BD2B72E92B2B932100199AE6 /* LaMeteoApp.swift */,
-				BD2B72EB2B2B932100199AE6 /* ContentView.swift */,
 				BD2B72ED2B2B932300199AE6 /* Assets.xcassets */,
 				BD2B72EF2B2B932300199AE6 /* Preview Content */,
 			);
@@ -125,6 +128,22 @@
 				BD2B73062B2B932300199AE6 /* LaMeteoUITestsLaunchTests.swift */,
 			);
 			path = LaMeteoUITests;
+			sourceTree = "<group>";
+		};
+		BD2B73132B2B934A00199AE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B72EB2B2B932100199AE6 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD2B73142B2B935500199AE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B73152B2B937600199AE6 /* SampleWeather.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2B72EC2B2B932100199AE6 /* ContentView.swift in Sources */,
+				BD2B73162B2B937600199AE6 /* SampleWeather.swift in Sources */,
 				BD2B72EA2B2B932100199AE6 /* LaMeteoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
