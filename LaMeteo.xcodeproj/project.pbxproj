@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		BD2B72EA2B2B932100199AE6 /* LaMeteoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B72E92B2B932100199AE6 /* LaMeteoApp.swift */; };
-		BD2B72EC2B2B932100199AE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B72EB2B2B932100199AE6 /* ContentView.swift */; };
+		BD2B72EC2B2B932100199AE6 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B72EB2B2B932100199AE6 /* WeatherView.swift */; };
 		BD2B72EE2B2B932300199AE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2B72ED2B2B932300199AE6 /* Assets.xcassets */; };
 		BD2B72F12B2B932300199AE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2B72F02B2B932300199AE6 /* Preview Assets.xcassets */; };
 		BD2B72FB2B2B932300199AE6 /* LaMeteoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B72FA2B2B932300199AE6 /* LaMeteoTests.swift */; };
 		BD2B73052B2B932300199AE6 /* LaMeteoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B73042B2B932300199AE6 /* LaMeteoUITests.swift */; };
 		BD2B73072B2B932300199AE6 /* LaMeteoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B73062B2B932300199AE6 /* LaMeteoUITestsLaunchTests.swift */; };
 		BD2B73162B2B937600199AE6 /* SampleWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B73152B2B937600199AE6 /* SampleWeather.swift */; };
+		BDA9B9F72B2BA0E400B7ED52 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9B9F62B2BA0E400B7ED52 /* WeatherData.swift */; };
+		BDA9B9FF2B2DE47300B7ED52 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9B9FE2B2DE47300B7ED52 /* APIManager.swift */; };
+		BDA9BA012B2DEACE00B7ED52 /* APITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9BA002B2DEACE00B7ED52 /* APITestView.swift */; };
+		BDDBA0D72B30B8D8001206FC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBA0D62B30B8D8001206FC /* CardView.swift */; };
+		BDDBA0D92B30C07E001206FC /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBA0D82B30C07E001206FC /* LocationsView.swift */; };
+		BDDBA0DE2B31E644001206FC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBA0DD2B31E644001206FC /* MapView.swift */; };
+		BDDBA0E02B32112E001206FC /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBA0DF2B32112E001206FC /* SheetView.swift */; };
+		BDDBA0E22B3214CD001206FC /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBA0E12B3214CD001206FC /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +45,7 @@
 /* Begin PBXFileReference section */
 		BD2B72E62B2B932100199AE6 /* LaMeteo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaMeteo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2B72E92B2B932100199AE6 /* LaMeteoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaMeteoApp.swift; sourceTree = "<group>"; };
-		BD2B72EB2B2B932100199AE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BD2B72EB2B2B932100199AE6 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		BD2B72ED2B2B932300199AE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD2B72F02B2B932300199AE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD2B72F62B2B932300199AE6 /* LaMeteoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaMeteoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +54,14 @@
 		BD2B73042B2B932300199AE6 /* LaMeteoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaMeteoUITests.swift; sourceTree = "<group>"; };
 		BD2B73062B2B932300199AE6 /* LaMeteoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaMeteoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BD2B73152B2B937600199AE6 /* SampleWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWeather.swift; sourceTree = "<group>"; };
+		BDA9B9F62B2BA0E400B7ED52 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		BDA9B9FE2B2DE47300B7ED52 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		BDA9BA002B2DEACE00B7ED52 /* APITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestView.swift; sourceTree = "<group>"; };
+		BDDBA0D62B30B8D8001206FC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		BDDBA0D82B30C07E001206FC /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		BDDBA0DD2B31E644001206FC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BDDBA0DF2B32112E001206FC /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		BDDBA0E12B3214CD001206FC /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +96,7 @@
 				BD2B72F92B2B932300199AE6 /* LaMeteoTests */,
 				BD2B73032B2B932300199AE6 /* LaMeteoUITests */,
 				BD2B72E72B2B932100199AE6 /* Products */,
+				BDA9B9F92B2CACB500B7ED52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,7 +150,12 @@
 		BD2B73132B2B934A00199AE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BD2B72EB2B2B932100199AE6 /* ContentView.swift */,
+				BDA9BA002B2DEACE00B7ED52 /* APITestView.swift */,
+				BD2B72EB2B2B932100199AE6 /* WeatherView.swift */,
+				BDDBA0D62B30B8D8001206FC /* CardView.swift */,
+				BDDBA0D82B30C07E001206FC /* LocationsView.swift */,
+				BDDBA0DD2B31E644001206FC /* MapView.swift */,
+				BDDBA0DF2B32112E001206FC /* SheetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,8 +164,18 @@
 			isa = PBXGroup;
 			children = (
 				BD2B73152B2B937600199AE6 /* SampleWeather.swift */,
+				BDA9B9F62B2BA0E400B7ED52 /* WeatherData.swift */,
+				BDA9B9FE2B2DE47300B7ED52 /* APIManager.swift */,
+				BDDBA0E12B3214CD001206FC /* LocationService.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BDA9B9F92B2CACB500B7ED52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +194,8 @@
 			dependencies = (
 			);
 			name = LaMeteo;
+			packageProductDependencies = (
+			);
 			productName = LaMeteo;
 			productReference = BD2B72E62B2B932100199AE6 /* LaMeteo.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +268,9 @@
 				Base,
 			);
 			mainGroup = BD2B72DD2B2B932000199AE6;
+			packageReferences = (
+				BDDBA0DC2B31E417001206FC /* XCRemoteSwiftPackageReference "search-ios" */,
+			);
 			productRefGroup = BD2B72E72B2B932100199AE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -276,8 +313,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD2B72EC2B2B932100199AE6 /* ContentView.swift in Sources */,
+				BDDBA0D72B30B8D8001206FC /* CardView.swift in Sources */,
+				BDA9B9FF2B2DE47300B7ED52 /* APIManager.swift in Sources */,
+				BDDBA0E02B32112E001206FC /* SheetView.swift in Sources */,
+				BD2B72EC2B2B932100199AE6 /* WeatherView.swift in Sources */,
+				BDA9BA012B2DEACE00B7ED52 /* APITestView.swift in Sources */,
 				BD2B73162B2B937600199AE6 /* SampleWeather.swift in Sources */,
+				BDDBA0E22B3214CD001206FC /* LocationService.swift in Sources */,
+				BDDBA0D92B30C07E001206FC /* LocationsView.swift in Sources */,
+				BDDBA0DE2B31E644001206FC /* MapView.swift in Sources */,
+				BDA9B9F72B2BA0E400B7ED52 /* WeatherData.swift in Sources */,
 				BD2B72EA2B2B932100199AE6 /* LaMeteoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +647,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDDBA0DC2B31E417001206FC /* XCRemoteSwiftPackageReference "search-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/search-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = BD2B72DE2B2B932000199AE6 /* Project object */;
 }

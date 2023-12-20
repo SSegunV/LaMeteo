@@ -8,33 +8,45 @@
 import SwiftUI
 import Charts
 
-var data: [SampleWeather] = [
+var sampleData: [SampleWeather] = [
     .init(type: "Cube", count: 5),
     .init(type: "Sphere", count: 4),
     .init(type: "Pyramid", count: 4)
 ]
-struct ContentView: View {
+struct WeatherView: View {
     var body: some View {
         ZStack {
             VStack {
+                
+                // Weather Display
                 Text("HOME")
-                Text("Sunny | 30")
+                HStack {
+                    VStack {
+                        Text("33˚")
+                        Text("29˚")
+                    }
+                    Text("30˚")
+                }
+                
+                // Hour Forecast
                 Chart {
                     BarMark(
-                        x: .value("Shape Type", data[0].type),
-                        y: .value("Total Count", data[0].count)
+                        x: .value("Shape Type", sampleData[0].type),
+                        y: .value("Total Count", sampleData[0].count)
                         )
                     BarMark(
-                        x: .value("Shape Type", data[1].type),
-                        y: .value("Total Count", data[1].count)
+                        x: .value("Shape Type", sampleData[1].type),
+                        y: .value("Total Count", sampleData[1].count)
                         )
                     BarMark(
-                        x: .value("Shape Type", data[2].type),
-                        y: .value("Total Count", data[2].count)
+                        x: .value("Shape Type", sampleData[2].type),
+                        y: .value("Total Count", sampleData[2].count)
                         )
                 }
                 .frame(height: 300)
                 .padding()
+                
+                // Additional data
                 HStack{
                     VStack{
                         Label("Feels Like", systemImage: "thermometer")
@@ -58,5 +70,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    WeatherView()
 }
