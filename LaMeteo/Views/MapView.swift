@@ -17,7 +17,7 @@ struct MapView: View {
     @State var pinLocation :CLLocationCoordinate2D? = nil
     @State private var isSheet1Presented: Bool = true
     @State var isSheet2Presented: Bool = false
-    @State var newLocation = LocationData.emptyLocation
+    //@State var newLocation = LocationData.emptyLocation
     @Binding var locations: [LocationData]
     
     
@@ -83,7 +83,7 @@ struct MapView: View {
                             }
                         }
                         .sheet(isPresented: $isSheet2Presented) {
-                            LocationEditView(pinLocation: $pinLocation, locations: $locations, location: $newLocation, isSheet2Presented: $isSheet2Presented)
+                            LocationEditView(pinLocation: $pinLocation, locations: $locations, isSheet2Presented: $isSheet2Presented)
                         }
                         .sheet(isPresented: $isSheet1Presented) {
                             SheetView(searchResults: $searchResults)

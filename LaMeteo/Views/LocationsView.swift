@@ -16,14 +16,16 @@ struct LocationsView: View {
     let saveAction: ()->Void
 
     var body: some View {
-            NavigationView {
+            NavigationStack {
                 VStack {
                     List {
                         ForEach($locations) { $location in
-                            NavigationLink(destination: WeatherView(location: $location)) {
+                            NavigationLink(destination: WeatherView(locations: $locations)) {
                                 CardView(location: $location)
                             }
                         }
+                        .onDelete { indices in
+                            locations.remove(atOffsets: indices)}
                         NavigationLink(destination: MapView(locations: $locations)) {
                             Text("Add Location")
                                 .font(.headline)

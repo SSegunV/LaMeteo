@@ -39,3 +39,4 @@ func fetchForecast(lon: Double, lat: Double) async throws -> ForecastData {
     
     return decoded
 }
+

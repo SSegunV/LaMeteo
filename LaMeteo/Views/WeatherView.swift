@@ -12,55 +12,22 @@ import Charts
 struct WeatherView: View {
     
     @State private var current_weather = WeatherData.sampleData[2]
-    @Binding var location: LocationData
     @State var forecast: ForecastData = ForecastData.sampleData
+    @Binding var locations: [LocationData]
     
     var body: some View {
         ZStack {
-            VStack {
-                // Weather Box
-                WeatherBoxView(location: $location, current_weather: $current_weather)
-                
-                // Hour Forecast
-                ForecastBarView(forecast: $forecast)
-                
-                // Additional data
-                AdditionalMetricsView(current_weather: $current_weather)
-            }
-            // fetch forecast
-            .onAppear {
-                Task {
-                    do {
-                        forecast = try await fetchForecast(lon: location.coord.lon!, lat: location.coord.lat!)
-                        print("success")
-                    } catch {
-                        print(error)
+            TabView {
+                ForEach($locations) { $location in
+                    ContentView(location: $location)
+                        .tag(location.id)
                     }
                 }
-            }
-
-            // fetch weather
-            .onAppear {
-                Task {
-                    do {
-                        current_weather = try await fetchWeather(lon: location.coord.lon!, lat: location.coord.lat!)
-                        print("success")
-                    } catch {
-                        print(error)
-                    }
-                }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
             }
         }
-        //.toolbar {
-            //ToolbarItem(placement: .topBarTrailing) {
-               // NavigationLink(destination: LocationsView(locations: locations)) {
-                  //  Text("")
-               // }
-            //}
-        //}
     }
-}
 
 #Preview {
-    WeatherView(location: .constant(LocationData.sampleData[0]))
+    WeatherView(locations: .constant(LocationData.sampleData))
 }
