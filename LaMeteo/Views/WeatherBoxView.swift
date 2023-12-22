@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct WeatherBoxView: View {
+    @Binding var location: LocationData
+    @Binding var current_weather: WeatherData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(location.place)
+            .textCase(.uppercase)
+        HStack {
+            VStack {
+                Text(
+                    String(format: "%.0f˚", current_weather.main.temp_max!)
+                    )
+                Text(
+                    String(format: "%.0f˚", current_weather.main.temp_min!)
+                    )
+            }
+            Text(
+                String(format: "%.0f˚", current_weather.main.temp!)
+                )
+        }
     }
 }
 
 #Preview {
-    WeatherBoxView()
+    WeatherBoxView(location: .constant(LocationData.sampleData[0]), current_weather: .constant(WeatherData.sampleData[0]))
 }

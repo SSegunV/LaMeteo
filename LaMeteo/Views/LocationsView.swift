@@ -10,19 +10,35 @@ import SwiftUI
 // List of views
 
 struct LocationsView: View {
-    var locations: [WeatherData]
-    var body: some View {
+    
+    @Binding var locations: [LocationData]
+    @Environment(\.scenePhase) private var scenePhase
+    let saveAction: ()->Void
 
-        // List
-        List(locations) { location in
-            CardView(current_weather: location)}
-        
-        // Navigation Link that takes you to map
-    }
+    var body: some View {
+            NavigationView {
+                VStack {
+                    List {
+                        ForEach($locations) { $location in
+                            NavigationLink(destination: WeatherView(location: $location)) {
+                                CardView(location: $location)
+                            }
+                        }
+                        NavigationLink(destination: MapView(locations: $locations)) {
+                            Text("Add Location")
+                                .font(.headline)
+                                .padding()
+                        }
+                    }
+                }
+            }
+            .onChange(of: scenePhase) {
+                if scenePhase == .inactive {saveAction()}}
+        }
 }
 
 struct LocationsView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationsView(locations: WeatherData.sampleData)
+        LocationsView(locations: .constant((LocationData.sampleData)), saveAction: {})
     }
 }

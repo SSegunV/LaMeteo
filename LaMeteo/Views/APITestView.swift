@@ -16,7 +16,7 @@ struct APITest_View: View {
             // Call function
             Task {
                 do {
-                    let sample = try await fetchWeather(lon: -0.21, lat: 51.51)
+                    let sample = try await fetchForecast(lon: -0.21, lat: 51.51)
                     print(sample)
                 } catch {
                     print(error)

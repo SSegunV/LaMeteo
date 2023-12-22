@@ -8,67 +8,59 @@
 import SwiftUI
 import Charts
 
-var sampleData: [SampleWeather] = [
-    .init(type: "Cube", count: 5),
-    .init(type: "Sphere", count: 4),
-    .init(type: "Pyramid", count: 4)
-]
+
 struct WeatherView: View {
+    
+    @State private var current_weather = WeatherData.sampleData[2]
+    @Binding var location: LocationData
+    @State var forecast: ForecastData = ForecastData.sampleData
+    
     var body: some View {
         ZStack {
             VStack {
-                
-                // Weather Display
-                Text("HOME")
-                HStack {
-                    VStack {
-                        Text("33˚")
-                        Text("29˚")
-                    }
-                    Text("30˚")
-                }
+                // Weather Box
+                WeatherBoxView(location: $location, current_weather: $current_weather)
                 
                 // Hour Forecast
-                Chart {
-                    BarMark(
-                        x: .value("Shape Type", sampleData[0].type),
-                        y: .value("Total Count", sampleData[0].count)
-                        )
-                    BarMark(
-                        x: .value("Shape Type", sampleData[1].type),
-                        y: .value("Total Count", sampleData[1].count)
-                        )
-                    BarMark(
-                        x: .value("Shape Type", sampleData[2].type),
-                        y: .value("Total Count", sampleData[2].count)
-                        )
-                }
-                .frame(height: 300)
-                .padding()
+                ForecastBarView(forecast: $forecast)
                 
                 // Additional data
-                HStack{
-                    VStack{
-                        Label("Feels Like", systemImage: "thermometer")
-                        Text("30")
-                    }
-                    Spacer()
-                    VStack{
-                        Label("Humidity", systemImage: "humidity")
-                        Text("5.3")
-                    }
-                    Spacer()
-                    VStack{
-                        Label("Visibility", systemImage: "eye")
-                        Text("40")
+                AdditionalMetricsView(current_weather: $current_weather)
+            }
+            // fetch forecast
+            .onAppear {
+                Task {
+                    do {
+                        forecast = try await fetchForecast(lon: location.coord.lon!, lat: location.coord.lat!)
+                        print("success")
+                    } catch {
+                        print(error)
                     }
                 }
-                .padding()
+            }
+
+            // fetch weather
+            .onAppear {
+                Task {
+                    do {
+                        current_weather = try await fetchWeather(lon: location.coord.lon!, lat: location.coord.lat!)
+                        print("success")
+                    } catch {
+                        print(error)
+                    }
+                }
             }
         }
+        //.toolbar {
+            //ToolbarItem(placement: .topBarTrailing) {
+               // NavigationLink(destination: LocationsView(locations: locations)) {
+                  //  Text("")
+               // }
+            //}
+        //}
     }
 }
 
 #Preview {
-    WeatherView()
+    WeatherView(location: .constant(LocationData.sampleData[0]))
 }
