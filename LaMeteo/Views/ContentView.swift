@@ -26,11 +26,9 @@ struct ContentView: View {
                 .scaledToFill()
             VStack {
                 WeatherBoxView(location: $location, current_weather: $current_weather)
-                    
-                    
-                    ForecastBarView(forecast: $forecast)
-                    AdditionalMetricsView(current_weather: $current_weather)
-                }
+                ForecastBarView(forecast: $forecast)
+                AdditionalMetricsView(current_weather: $current_weather)
+            }
                 // fetch forecast
             .onAppear {
                 Task {

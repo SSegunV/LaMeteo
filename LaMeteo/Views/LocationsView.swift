@@ -16,27 +16,28 @@ struct LocationsView: View {
     let saveAction: ()->Void
 
     var body: some View {
-            NavigationStack {
-                VStack {
-                    List {
-                        ForEach($locations) { $location in
-                            NavigationLink(destination: WeatherView(locations: $locations)) {
-                                CardView(location: $location)
-                            }
+        NavigationStack {
+            VStack {
+                List {
+                    ForEach($locations) { $location in
+                        NavigationLink(destination: WeatherView(locations: $locations)) {
+                            CardView(location: $location)
                         }
-                        .onDelete { indices in
-                            locations.remove(atOffsets: indices)}
-                        NavigationLink(destination: MapView(locations: $locations)) {
-                            Text("Add Location")
-                                .font(.headline)
-                                .padding()
-                        }
+                    }
+                    .onDelete { indices in
+                        locations.remove(atOffsets: indices)}
+                    NavigationLink(destination: MapView(locations: $locations)) {
+                        Text("Add Location")
+                            .font(.headline)
+                            .padding()
                     }
                 }
             }
-            .onChange(of: scenePhase) {
-                if scenePhase == .inactive {saveAction()}}
         }
+        
+        .onChange(of: scenePhase) {
+            if scenePhase == .inactive {saveAction()}}
+    }
 }
 
 struct LocationsView_Previews: PreviewProvider {

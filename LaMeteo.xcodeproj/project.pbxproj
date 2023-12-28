@@ -29,7 +29,6 @@
 		BDDBA0EA2B34A5D6001206FC /* LocationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBA0E92B34A5D6001206FC /* LocationStore.swift */; };
 		BDDBA0EC2B34BCF6001206FC /* LocationEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBA0EB2B34BCF6001206FC /* LocationEditView.swift */; };
 		BDDBA0EE2B34D286001206FC /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDBA0ED2B34D286001206FC /* ForecastData.swift */; };
-		BDDD2B642B3735D900EFE22F /* BackgroundTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD2B632B3735D900EFE22F /* BackgroundTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +74,6 @@
 		BDDBA0E92B34A5D6001206FC /* LocationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStore.swift; sourceTree = "<group>"; };
 		BDDBA0EB2B34BCF6001206FC /* LocationEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEditView.swift; sourceTree = "<group>"; };
 		BDDBA0ED2B34D286001206FC /* ForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
-		BDDD2B632B3735D900EFE22F /* BackgroundTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +172,6 @@
 				BDDBA0E52B337374001206FC /* WeatherBoxView.swift */,
 				BDDBA0E72B338583001206FC /* AdditionalMetricsView.swift */,
 				BDAB04F12B35EC1900B438C9 /* ForecastBarView.swift */,
-				BDDD2B632B3735D900EFE22F /* BackgroundTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,7 +347,6 @@
 				BDDBA0E42B333A06001206FC /* LocationData.swift in Sources */,
 				BDA9B9F72B2BA0E400B7ED52 /* WeatherData.swift in Sources */,
 				BD2B72EA2B2B932100199AE6 /* LaMeteoApp.swift in Sources */,
-				BDDD2B642B3735D900EFE22F /* BackgroundTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

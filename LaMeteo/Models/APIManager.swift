@@ -93,3 +93,16 @@ extension DateFormatter {
         return formatter
     }()
 }
+
+func extractHour(from dateString: String) -> String? {
+    // Find the index of the space character before the hour component
+    if let spaceIndex = dateString.firstIndex(of: " ") {
+        // Calculate the position of the hour component
+        let hourStartIndex = dateString.index(after: spaceIndex)
+        let hourEndIndex = dateString.index(hourStartIndex, offsetBy: 2)
+
+        // Extract the hour component
+        return String(dateString[hourStartIndex..<hourEndIndex])
+    }
+    return nil
+}

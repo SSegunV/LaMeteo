@@ -11,27 +11,34 @@ import MapKit
 
 struct ForecastBarView: View {
     @Binding var forecast: ForecastData
-        var body: some View {
+    
+    var body: some View {
         Chart {
-            BarMark(
-                x: .value("Time", forecast.list![0].dtTxt!),
-                y: .value("Temperature", forecast.list![0].main!.temp!)
-            )
-            BarMark(
-                x: .value("Time", forecast.list![1].dtTxt!),
-                y: .value("Temperature", forecast.list![1].main!.temp!)
-            )
-            BarMark(
-                x: .value("Time", forecast.list![2].dtTxt!),
-                y: .value("Temperature", forecast.list![2].main!.temp!)
-            )
-            BarMark(
-                x: .value("Time", forecast.list![3].dtTxt!),
-                y: .value("Temperature", forecast.list![3].main!.temp!)
+            ForEach(0..<min(8, forecast.list?.count ?? 0), id: \.self) { index in
+                if let dtTxt = forecast.list?[index].dtTxt,
+                   let hour = extractHour(from: dtTxt),
+                   let temperature = forecast.list?[index].main?.temp {
+                    
+                    BarMark(
+                        x: .value("Time", "\(hour):00"),
+                        y: .value("Temperature", temperature)
+                    )
+                }
+            }
+        }
+        .frame(width: UIScreen.main.bounds.width * 6/7, height: UIScreen.main.bounds.height * 1.1/3)
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.white.opacity(0.23))
+        )
+        .foregroundStyle(.teal)
+        .chartYScale(domain: [-60, 60])
+        .chartYAxis {
+            AxisMarks(
+                values: .automatic(desiredCount: 9)
             )
         }
-        .frame(width: 320, height: 300)
-        .padding()
     }
 }
 
