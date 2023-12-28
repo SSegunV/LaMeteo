@@ -22,11 +22,11 @@ struct WeatherBoxView: View {
                     )
                     Text(
                         String(format: "%.0f˚", current_weather.main.temp_min!)
-                        )
+                    )
                 }
                 Text(
                     String(format: "%.0f˚", current_weather.main.temp!)
-                    )
+                )
             }
         }
         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)

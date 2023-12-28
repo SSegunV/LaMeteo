@@ -20,8 +20,8 @@ struct LocationData: Identifiable, Codable {
     
     static let sampleData: [LocationData] =
     [
-    LocationData(place: "The Crib", coord: Coord(lon: -0.21, lat: 51.51)),
-    LocationData(place: "Outside", coord: Coord(lon: 55.12, lat: -20.70))
+        LocationData(place: "Home", coord: Coord(lon: 0.19, lat: 51.50)),
+    LocationData(place: "Tax Office", coord: Coord(lon: 55.12, lat: -20.70))
     ]
     
     static let emptyLocation: LocationData =
