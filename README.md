@@ -1,4 +1,4 @@
-<img width="457" alt="Screenshot 2023-12-28 at 18 32 39" src="https://github.com/SSegunV/LaMeteo/assets/152334094/a7999800-aa4d-4cac-aee9-92e6ee5d9f22">
+<img width="336" alt="Screenshot 2023-12-28 at 18 52 35" src="https://github.com/SSegunV/LaMeteo/assets/152334094/4aded084-8c5b-4110-823a-d1331dd0f408">
 
 <img width="410" alt="Screenshot 2023-12-28 at 18 25 23" src="https://github.com/SSegunV/LaMeteo/assets/152334094/dd4a60c4-287c-4fa8-898d-f9a85142a732">
 
