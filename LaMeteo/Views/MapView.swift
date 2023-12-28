@@ -2,7 +2,7 @@
 //  MapView.swift
 //  LaMeteo
 //
-//  Created by Victor Jegede on 19/12/2023.
+//  Created by Segun Sinclair on 19/12/2023.
 //
 
 import SwiftUI

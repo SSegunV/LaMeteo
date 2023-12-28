@@ -2,7 +2,7 @@
 //  Forecast Data.swift
 //  LaMeteo
 //
-//  Created by Victor Jegede on 21/12/2023.
+//  Created by Segun Sinclair on 21/12/2023.
 //
 
 import Foundation
@@ -72,6 +72,7 @@ struct City: Decodable, Identifiable {
     let sunrise: Int?
     let sunset: Int?
 }
+
 
 extension ForecastData {
     static let sampleData: ForecastData =

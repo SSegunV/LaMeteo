@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  LaMeteo
 //
-//  Created by Victor Jegede on 02/12/2023.
+//  Created by Segun Sinclair on 02/12/2023.
 //
 
 import SwiftUI
@@ -16,18 +16,18 @@ struct WeatherView: View {
     @Binding var locations: [LocationData]
     
     var body: some View {
-        ZStack {
             TabView {
                 ForEach($locations) { $location in
-                    ContentView(location: $location)
+                    ContentView(location: $location, bg: Image("Page5"), fbg: Image("Night"))
                         .tag(location.id)
                     }
-                }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
             }
+            .ignoresSafeArea()
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
         }
     }
 
 #Preview {
     WeatherView(locations: .constant(LocationData.sampleData))
 }
+ 

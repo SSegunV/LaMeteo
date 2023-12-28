@@ -2,7 +2,7 @@
 //  LocationData.swift
 //  LaMeteo
 //
-//  Created by Victor Jegede on 20/12/2023.
+//  Created by Segun Sinclair on 20/12/2023.
 //
 
 import Foundation

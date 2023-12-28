@@ -2,7 +2,7 @@
 //  WeatherData.swift
 //  LaMeteo
 //
-//  Created by Victor Jegede on 14/12/2023.
+//  Created by Segun Sinclair on 14/12/2023.
 //
 
 import Foundation
@@ -78,7 +78,7 @@ extension WeatherData {
     static let sampleData: [WeatherData] =
 [
     WeatherData(coord: Coord(lon: Optional(-0.21), lat: Optional(51.51)), weather: [Weather(id: Optional(804), main: Optional("Clouds"), description: Optional("overcast clouds"), icon: Optional("04n"))], base: "stations", main: Main(temp: Optional(11.8), feels_like: Optional(11.28), temp_min: Optional(10.89), temp_max: Optional(12.66), pressure: Optional(1025), humidity: Optional(86), sea_level: nil, grnd_level: nil), visibility: 10000, wind: Wind(speed: Optional(6.17), deg: Optional(220), gust: nil), rain: nil, clouds: Clouds(all: Optional(100)), dt: 1702919383, sys: Sys(type: Optional(2), id: Optional(2075535), country: Optional("GB"), sunrise: Optional(1702886528), sunset: Optional(1702914744)), timezone: 0, id: 2641168, name: "Notting Hill", cod: 200),
-    WeatherData(coord: Coord(lon: Optional(-0.21), lat: Optional(51.51)), weather: [Weather(id: Optional(804), main: Optional("Clouds"), description: Optional("overcast clouds"), icon: Optional("04n"))], base: "stations", main: Main(temp: Optional(11.8), feels_like: Optional(11.28), temp_min: Optional(10.89), temp_max: Optional(12.66), pressure: Optional(1025), humidity: Optional(86), sea_level: nil, grnd_level: nil), visibility: 10000, wind: Wind(speed: Optional(6.17), deg: Optional(220), gust: nil), rain: nil, clouds: Clouds(all: Optional(100)), dt: 1702919383, sys: Sys(type: Optional(2), id: Optional(2075535), country: Optional("GB"), sunrise: Optional(1702886528), sunset: Optional(1702914744)), timezone: 0, id: 2641168, name: "Notting Hill", cod: 200),
+    WeatherData(coord: Coord(lon: Optional(-0.21), lat: Optional(51.51)), weather: [Weather(id: Optional(804), main: Optional("Clear"), description: Optional("overcast clouds"), icon: Optional("04n"))], base: "stations", main: Main(temp: Optional(11.8), feels_like: Optional(11.28), temp_min: Optional(10.89), temp_max: Optional(12.66), pressure: Optional(1025), humidity: Optional(86), sea_level: nil, grnd_level: nil), visibility: 10000, wind: Wind(speed: Optional(6.17), deg: Optional(220), gust: nil), rain: nil, clouds: Clouds(all: Optional(100)), dt: 1702919383, sys: Sys(type: Optional(2), id: Optional(2075535), country: Optional("GB"), sunrise: Optional(1702886528), sunset: Optional(1702914744)), timezone: 0, id: 2641168, name: "Notting Hill", cod: 200),
     WeatherData(coord: Coord(lon: Optional(0), lat: Optional(0)), weather: [Weather(id: Optional(0), main: Optional("-"), description: Optional("-"), icon: Optional("-"))], base: "stations", main: Main(temp: Optional(0.00), feels_like: Optional(0.00), temp_min: Optional(0.00), temp_max: Optional(0.00), pressure: Optional(Int(0.00)), humidity: Optional(Int(00.00)), sea_level: nil, grnd_level: nil), visibility: 00000, wind: Wind(speed: Optional(0.00), deg: Optional(000), gust: nil), rain: nil, clouds: Clouds(all: Optional(000)), dt: 00000000, sys: Sys(type: Optional(0), id: Optional(000000), country: Optional("-"), sunrise: Optional(0000000), sunset: Optional(000000)), timezone: 0, id: 2641168, name: "-", cod: 200)
     ]
 }

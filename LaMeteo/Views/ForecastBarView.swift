@@ -2,7 +2,7 @@
 //  ForecastBarView.swift
 //  LaMeteo
 //
-//  Created by Victor Jegede on 22/12/2023.
+//  Created by Segun Sinclair on 22/12/2023.
 //
 
 import SwiftUI

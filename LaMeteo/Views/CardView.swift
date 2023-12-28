@@ -2,7 +2,7 @@
 //  CardView.swift
 //  LaMeteo
 //
-//  Created by Victor Jegede on 18/12/2023.
+//  Created by Segun Sinclair on 18/12/2023.
 //
 
 import SwiftUI
@@ -35,6 +35,7 @@ struct CardView: View {
             }
         }
         .padding()
+        //.background(Color.teal)
     }
 }
 
