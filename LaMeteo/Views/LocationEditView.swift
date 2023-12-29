@@ -36,11 +36,11 @@ struct LocationEditView: View {
             TextField("Name", text: $newLocation.place)
                 .padding()
             Spacer()
+                .padding()
         }
-        //.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .background(Color.white)
         .cornerRadius(10)
-        .frame(width: UIScreen.main.bounds.width * 6/7, height: UIScreen.main.bounds.height * 1 / 2)
+        .frame(width: UIScreen.main.bounds.width * 6/7, height: UIScreen.main.bounds.height * 1/7)
         .padding()
     }
 }

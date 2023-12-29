@@ -34,7 +34,6 @@ struct LocationsView: View {
                 }
             }
         }
-        
         .onChange(of: scenePhase) {
             if scenePhase == .inactive {saveAction()}}
     }
