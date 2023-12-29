@@ -19,12 +19,18 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
+            
+            // Time of day bakdrop
             fbg
                 .resizable()
                 .scaledToFill()
+            
+            // Current weather in front
             bg
                 .resizable()
                 .scaledToFill()
+            
+            // Weather metrics
             VStack {
                 WeatherBoxView(location: $location, current_weather: $current_weather)
                     .position(x: UIScreen.main.bounds.width * 1/2, y: UIScreen.main.bounds.height * 1/5)
@@ -33,9 +39,11 @@ struct ContentView: View {
                 AdditionalMetricsView(current_weather: $current_weather)
                     .position(x: UIScreen.main.bounds.width * 1/2, y: UIScreen.main.bounds.height * 0.9/7)
             }
+            
+            // Change text colour according to time of day
             .foregroundColor(fg)
             
-                // fetch forecast
+                // Fetch data and change view accordingly 
             .onAppear {
                 Task {
                     do {

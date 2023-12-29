@@ -7,6 +7,9 @@
 
 import Foundation
 
+
+// Structure to receive API forecast data
+
 struct ForecastData: Decodable {
     let cod: String?
     let message: Int?

@@ -23,6 +23,8 @@ struct LocationEditView: View {
                 }
                 .padding()
                 Spacer()
+                
+                // Save new location 
                 Button("Confirm") {
                     newLocation.coord.lat = pinLocation.unsafelyUnwrapped.latitude
                     newLocation.coord.lon = pinLocation.unsafelyUnwrapped.longitude
@@ -32,7 +34,6 @@ struct LocationEditView: View {
                 .padding()
             }
             Spacer()
-            //.padding()
             TextField("Name", text: $newLocation.place)
                 .padding()
             Spacer()

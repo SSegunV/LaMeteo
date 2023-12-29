@@ -15,7 +15,7 @@ struct SheetView: View {
 
     var body: some View {
         VStack {
-            // 1
+            // Search text field
             HStack {
                 Image(systemName: "magnifyingglass")
                 TextField("Search for a place", text: $search)

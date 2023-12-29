@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct CardView: View {
-    //@State var current_weather: WeatherData
     @Binding var location: LocationData
     @State private var current_weather = WeatherData.sampleData[2]
     
-    // Card view to display location conditions in list
+    // Card view to display summary of locations and the conditions
     var body: some View {
         VStack (alignment: .leading) {
             Text(location.place)
                 .font(.headline)
+            
+            // When the view appears, change the displayed data
+            // Asynchronous action
                 .onAppear {
                     Task {
                         do {
@@ -35,7 +37,6 @@ struct CardView: View {
             }
         }
         .padding()
-        //.background(Color.teal)
     }
 }
 

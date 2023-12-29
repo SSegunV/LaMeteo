@@ -7,6 +7,9 @@
 
 import Foundation
 
+// Structure for the user's saved locations. These are stored on the user's device.
+// Longitude and latitude included for API fetches
+
 struct LocationData: Identifiable, Codable {
     let id: UUID
     var place: String

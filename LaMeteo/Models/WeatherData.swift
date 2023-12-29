@@ -7,7 +7,10 @@
 
 import Foundation
 
-// Structure to hold weather values
+// Structure to receive weather data from API call. 
+// Essential to be built the same as the API's response
+// Includes samples for test cases 
+
 struct WeatherData: Decodable, Identifiable {
     var coord: Coord
     var weather: [Weather]
@@ -54,6 +57,7 @@ struct Wind: Decodable {
     var gust: Double?
 }
 
+// h1 sent as 1h from OpenWeather, need to create coding key
 struct Rain: Decodable {
     var h1 : Double?
     
@@ -74,6 +78,8 @@ struct Sys: Decodable {
     var sunset: Int?
 }
     
+// Weather Samples
+
 extension WeatherData {
     static let sampleData: [WeatherData] =
 [

@@ -7,6 +7,9 @@
 
 import Foundation
 
+// Source of truth for locations
+// Includes save and load actions
+
 @MainActor
 class LocationStore: ObservableObject {
     @Published var locations: [LocationData] = []

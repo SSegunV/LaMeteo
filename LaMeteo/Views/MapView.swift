@@ -17,7 +17,6 @@ struct MapView: View {
     @State var pinLocation :CLLocationCoordinate2D? = nil
     @State private var isSheet1Presented: Bool = true
     @State var isSheet2Presented: Bool = false
-    //@State var newLocation = LocationData.emptyLocation
     @Binding var locations: [LocationData]
     
     
@@ -31,6 +30,8 @@ struct MapView: View {
                 NavigationView {
                     VStack{
                         MapReader{ reader in
+                            
+                            // Define look of map
                             Map(
                                 position: $cameraProsition,
                                 interactionModes: .all, 
@@ -43,9 +44,10 @@ struct MapView: View {
                                     }
                                     .tag(result)
                                 }
+                                
+                                // Show location pin
                                 if let pl = pinLocation {
                                     Marker("Add Location", coordinate: pl)
-
                                 }
                             }
                             .onChange(of: selectedLocation) {
@@ -82,9 +84,12 @@ struct MapView: View {
                                 }
                             }
                         }
+                        // Location name edit sheet
                         .sheet(isPresented: $isSheet2Presented) {
                             LocationEditView(pinLocation: $pinLocation, locations: $locations, isSheet2Presented: $isSheet2Presented)
                         }
+                        
+                        // Search results sheet
                         .sheet(isPresented: $isSheet1Presented) {
                             SheetView(searchResults: $searchResults)
                         }
@@ -93,6 +98,8 @@ struct MapView: View {
                 }
             }
         }
+        
+        // Dim view if first location edit sheet is shown 
         if isSheet2Presented {
             Color.black.opacity(0.3)
                 .edgesIgnoringSafeArea(.all)

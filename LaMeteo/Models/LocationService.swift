@@ -8,6 +8,8 @@
 import Foundation
 import MapKit
 
+// Search result service
+
 struct SearchCompletions: Identifiable {
     let id = UUID()
     let title: String

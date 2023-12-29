@@ -16,6 +16,9 @@ struct LocationsView: View {
     let saveAction: ()->Void
 
     var body: some View {
+        
+        // Nav stack of cards
+        // Summary of users locations navigating to more detailed weather reports
         NavigationStack {
             VStack {
                 List {
@@ -26,6 +29,8 @@ struct LocationsView: View {
                     }
                     .onDelete { indices in
                         locations.remove(atOffsets: indices)}
+                    
+                    // Link at bottom of list to location add view
                     NavigationLink(destination: MapView(locations: $locations)) {
                         Text("Add Location")
                             .font(.headline)
@@ -34,6 +39,8 @@ struct LocationsView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: EmptyView()) 
         .onChange(of: scenePhase) {
             if scenePhase == .inactive {saveAction()}}
     }

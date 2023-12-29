@@ -15,6 +15,8 @@ struct WeatherView: View {
     @State var forecast: ForecastData = ForecastData.sampleData
     @Binding var locations: [LocationData]
     
+    // View simply displays weather reports for
+    // User locations in a list
     var body: some View {
             TabView {
                 ForEach($locations) { $location in
@@ -22,6 +24,16 @@ struct WeatherView: View {
                         .tag(location.id)
                     }
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: EmptyView()) // Hides the default back button
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    NavigationLink(destination: LocationsView(locations: $locations, saveAction: {})) {
+                        Image(systemName: "list.bullet")
+                    }
+                }
+            }
+            .toolbarBackground(.hidden, for: .navigationBar, .tabBar)
             .ignoresSafeArea()
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
         }
