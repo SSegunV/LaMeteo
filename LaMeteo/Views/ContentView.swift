@@ -14,6 +14,7 @@ struct ContentView: View {
     @State var forecast: ForecastData = ForecastData.sampleData
     @State var bg : Image
     @State var fbg: Image
+    @State var fg: Color
     
     var body: some View {
         
@@ -26,9 +27,14 @@ struct ContentView: View {
                 .scaledToFill()
             VStack {
                 WeatherBoxView(location: $location, current_weather: $current_weather)
+                    .position(x: UIScreen.main.bounds.width * 1/2, y: UIScreen.main.bounds.height * 1/5)
                 ForecastBarView(forecast: $forecast)
+                    .position(x: UIScreen.main.bounds.width * 1/2, y: UIScreen.main.bounds.height * 1.1/7)
                 AdditionalMetricsView(current_weather: $current_weather)
+                    .position(x: UIScreen.main.bounds.width * 1/2, y: UIScreen.main.bounds.height * 0.9/7)
             }
+            .foregroundColor(fg)
+            
                 // fetch forecast
             .onAppear {
                 Task {
@@ -51,6 +57,9 @@ struct ContentView: View {
                     do {
                         fbg = backgroundForTimeOfDay(forecast.list![0].dtTxt)
                     }
+                    do {
+                        fg = foregroundColorForTimeOfDay(forecast.list![0].dtTxt)
+                    }
                 }
             }
         }
@@ -59,5 +68,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(location: .constant(LocationData.sampleData[0]), bg: Image("Page5"), fbg: Image("Night"))
+    ContentView(location: .constant(LocationData.sampleData[0]), bg: Image("Page5"), fbg: Image("Night"), fg: .black)
 }

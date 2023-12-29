@@ -30,7 +30,7 @@ struct AdditionalMetricsView: View {
             VStack{
                 Label("Visibility", systemImage: "eye")
                 Text(
-                    String("\(current_weather.visibility) m")
+                    String("\(convertVisibilityToKilometers(current_weather.visibility)) km")
                 )
                 .multilineTextAlignment(.leading)
             }

@@ -106,3 +106,27 @@ func extractHour(from dateString: String) -> String? {
     }
     return nil
 }
+
+func convertVisibilityToKilometers(_ visibilityInMeters: Int) -> Int {
+    // Convert meters to kilometers
+    let visibilityInKilometers = visibilityInMeters / 1000
+    return visibilityInKilometers
+}
+
+func foregroundColorForTimeOfDay(_ dtTxt: String?) -> Color {
+    guard let dtTxt = dtTxt, let date = DateFormatter.weatherDateFormatter.date(from: dtTxt) else {
+        // Default foreground for unknown time
+        return .black
+    }
+
+    let calendar = Calendar.current
+    let hour = calendar.component(.hour, from: date)
+
+    if (6..<18).contains(hour) {
+        // Daytime foreground
+        return .black
+    } else {
+        // Nighttime foreground
+        return .white
+    }
+}

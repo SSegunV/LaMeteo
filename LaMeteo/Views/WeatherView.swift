@@ -18,7 +18,7 @@ struct WeatherView: View {
     var body: some View {
             TabView {
                 ForEach($locations) { $location in
-                    ContentView(location: $location, bg: Image("Page5"), fbg: Image("Night"))
+                    ContentView(location: $location, bg: Image("Page5"), fbg: Image("Night"), fg: .black)
                         .tag(location.id)
                     }
             }

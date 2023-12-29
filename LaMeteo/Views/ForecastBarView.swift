@@ -29,8 +29,8 @@ struct ForecastBarView: View {
         .frame(width: UIScreen.main.bounds.width * 6/7, height: UIScreen.main.bounds.height * 1.1/3)
         .padding()
         .background(
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color.white.opacity(0.23))
+            .ultraThinMaterial,
+            in: RoundedRectangle(cornerRadius: 10, style: .continuous)
         )
         .foregroundStyle(.teal)
         .chartYScale(domain: [-60, 60])
