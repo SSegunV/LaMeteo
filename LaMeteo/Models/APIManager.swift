@@ -11,7 +11,7 @@ import SwiftUI
 
 
 func fetchWeather(lon: Double, lat: Double) async throws -> WeatherData {
-    let api_key = "4e1d3a52061b74330ee1bf7e2269e621"
+    let api_key = "sample"
     
     // Define URL
     let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&appid=\(api_key)&units=metric"
